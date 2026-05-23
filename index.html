@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>하나카드 트래블로그 신용카드 신청</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <style>
+        body { font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, system-ui, Roboto, sans-serif; }
+        .hana-brand { color: #008485; }
+        .hana-bg { background-color: #008485; }
+        .hana-bg-light { background-color: rgba(0, 132, 133, 0.05); }
+    </style>
+</head>
+<body class="bg-gray-50 flex justify-center items-center min-h-screen p-4">
+
+    <div class="w-full max-w-md bg-white rounded-[40px] shadow-2xl border-8 border-gray-800 overflow-hidden relative" style="height: 840px;">
+        
+        <div class="bg-white px-6 pt-3 pb-2 flex justify-between items-center text-xs text-gray-500 font-medium">
+            <span>17:31</span>
+            <div class="flex items-center space-x-1">
+                <span>5G</span>
+                <div class="w-5 h-3 border border-gray-400 rounded-sm p-0.5"><div class="bg-gray-600 h-full w-full"></div></div>
+            </div>
+        </div>
+
+        <div class="px-6 py-4 border-b border-gray-100 flex items-center justify-between bg-white sticky top-0 z-10">
+            <div class="flex items-center space-x-2">
+                <span class="text-xl font-bold hana-brand">Hana Card</span>
+                <span class="text-xs bg-gray-100 text-gray-600 px-2 py-0.5 rounded-full font-semibold">신용카드 발급</span>
+            </div>
+            <button class="text-gray-400 hover:text-gray-600 text-xl font-bold">✕</button>
+        </div>
+
+        <div class="overflow-y-auto px-6 py-4" style="height: calc(100% - 130px);">
+            <div class="mb-6">
+                <h2 class="text-2xl font-bold text-gray-900 leading-tight">
+                    트래블로그 신용카드<br><span class="hana-brand">신청서 작성</span>
+                </h2>
+                <p class="text-gray-500 text-sm mt-1">고객님의 안전한 해외 결제를 위해 기본 정보를 확인합니다.</p>
+            </div>
+
+            <div class="flex items-center space-x-2 mb-6 text-xs font-bold text-gray-400">
+                <span class="text-gray-400">01 본인인증</span>
+                <span>▶</span>
+                <span class="hana-brand">02 카드선택</span>
+                <span>▶</span>
+                <span>03 최종완료</span>
+            </div>
+
+            <div class="bg-gradient-to-br from-gray-900 to-gray-800 rounded-2xl p-5 text-white mb-6 shadow-md relative overflow-hidden">
+                <div class="absolute right-[-20px] top-[-20px] w-32 h-32 bg-white opacity-5 rounded-full"></div>
+                <div class="text-xs font-bold tracking-widest uppercase opacity-60 mb-8">TRAVELOG CREDIT</div>
+                <div class="text-lg font-semibold tracking-wider mb-2">✦ ✦ ✦ ✦   ✦ ✦ ✦ ✦</div>
+                <div class="flex justify-between items-end">
+                    <div>
+                        <p class="text-[10px] opacity-50 uppercase">Card Holder</p>
+                        <p class="text-sm font-medium tracking-wide">HANA USER</p>
+                    </div>
+                    <div class="bg-white/20 px-3 py-1 rounded-md text-xs font-bold border border-white/20">PREMIUM</div>
+                </div>
+            </div>
+
+            <div class="space-y-4 mb-6">
+                <div>
+                    <label class="block text-xs font-bold text-gray-500 mb-1">국내외겸용 선택</label>
+                    <div class="grid grid-cols-2 gap-2">
+                        <button class="border-2 border-teal-600 bg-teal-50/50 text-teal-800 rounded-xl py-3 text-sm font-bold text-center">VISA (해외겸용)</button>
+                        <button class="border border-gray-200 text-gray-500 rounded-xl py-3 text-sm font-medium text-center bg-white">Mastercard</button>
+                    </div>
+                </div>
+
+                <div>
+                    <label class="block text-xs font-bold text-gray-500 mb-1">기본 기능 선택</label>
+                    <label class="flex items-center justify-between p-3 bg-white border border-gray-200 rounded-xl cursor-pointer">
+                        <div class="flex items-center space-x-3">
+                            <input type="checkbox" checked disabled class="w-4 h-4 accent-teal-700">
+                            <span class="text-sm font-medium text-gray-700">후불교통카드 기능 포함</span>
+                        </div>
+                        <span class="text-xs text-gray-400 font-medium">기본탑재</span>
+                    </label>
+                </div>
+            </div>
+
+            <div id="touch-container" class="border-2 border-dashed border-gray-300 rounded-2xl p-4 transition-all duration-300 bg-white hover:border-teal-500">
+                <label class="flex items-start space-x-3 cursor-pointer">
+                    <input type="checkbox" id="touch-trigger" class="mt-1 w-5 h-5 accent-teal-600 rounded-md cursor-pointer" onchange="toggleTouchBand()">
+                    <div class="flex-1">
+                        <div class="flex items-center space-x-2">
+                            <span class="text-sm font-extrabold text-gray-900">해외여행 필수: 무전원 터치밴드 추가</span>
+                            <span class="bg-red-500 text-white text-[9px] px-1.5 py-0.5 rounded-md font-bold animate-pulse">무료 프로모션</span>
+                        </div>
+                        <p class="text-xs text-gray-500 mt-1 leading-relaxed">
+                            유럽 소매치기 차단 및 일본 동전지옥 탈출! 스마트폰 없이 손목 태깅만으로 0.5초 만에 결제되는 웨어러블 밴드를 함께 발급받습니다.
+                        </p>
+                    </div>
+                </label>
+
+                <div id="touch-details" class="mt-4 pt-4 border-t border-gray-100 hidden transition-all duration-500">
+                    <div class="flex items-center space-x-4 bg-teal-50/40 p-3 rounded-xl border border-teal-100">
+                        <div class="w-14 h-14 bg-gray-900 rounded-xl flex flex-col items-center justify-center text-white p-1 relative shadow-inner">
+                            <span class="text-[8px] font-bold text-teal-400 tracking-tighter">nstouch</span>
+                            <div class="w-10 h-1 bg-teal-400 rounded-full my-1"></div>
+                            <span class="text-[7px] opacity-60">NFC ONLY</span>
+                        </div>
+                        <div class="flex-1">
+                            <p class="text-xs font-bold text-gray-800">트래블로그 Touch (차콜 블랙)</p>
+                            <p class="text-[11px] text-teal-700 mt-0.5 font-medium">✓ 100% 완전방수 | 배터리 충전 영구 불필요</p>
+                        </div>
+                    </div>
+                    <p class="text-[10px] text-gray-400 mt-2 text-center">신용카드 승인 시 터치밴드 배송 주소로 통합 일괄 발송됩니다.</p>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="absolute bottom-0 left-0 right-0 bg-white p-4 border-t border-gray-100 shadow-[0_-5px_15px_rgba(0,0,0,0.03)]">
+            <button onclick="simulateComplete()" class="w-full hana-bg text-white font-bold py-4 rounded-2xl shadow-lg transition-all active:scale-[0.98] hover:bg-teal-800 text-base">
+                다음 단계로 이동 (10초 컷)
+            </button>
+        </div>
+
+    </div>
+
+    <script>
+        function toggleTouchBand() {
+            const checkbox = document.getElementById('touch-trigger');
+            const container = document.getElementById('touch-container');
+            const details = document.getElementById('touch-details');
+            
+            if(checkbox.checked) {
+                container.classList.remove('border-dashed', 'border-gray-300');
+                container.classList.add('border-teal-500', 'bg-teal-50/20', 'shadow-inner');
+                details.classList.remove('hidden');
+            } else {
+                container.classList.add('border-dashed', 'border-gray-300');
+                container.classList.remove('border-teal-500', 'bg-teal-50/20', 'shadow-inner');
+                details.classList.add('hidden');
+            }
+        }
+
+        function simulateComplete() {
+            const isChecked = document.getElementById('touch-trigger').checked;
+            if(isChecked) {
+                alert("🎯 [시뮬레이션 완료]\n트래블로그 신용카드와 터치밴드가 동시 신청 완료되었습니다!\n\n마찰력 0%의 1-Click 연계 구조로 발급률 90% 돌파가 확정됩니다.");
+            } else {
+                alert("알림: 터치밴드 옵션을 체크하시면 동전 스트레스 없는 전 세계 손목 프리패스 결제가 활성화됩니다.");
+            }
+        }
+    </script>
+</body>
+</html>
